@@ -94,11 +94,21 @@ echo "31.  Hack Twitter"
 echo "============================" | lolcat
 echo "32.  Hack Email"
 echo "============================" | lolcat
-echo "33.  Hack WhatsApp"
+echo "33.  BlackEye"
 echo "============================" | lolcat
 echo "34.  OSIF"
 echo "============================" | lolcat
 echo "35.  D-TECT"
+echo "============================" | lolcat
+echo "36.  RECONDOG"
+echo "============================" | lolcat
+echo "37.  DarkSploit"
+echo "============================" | lolcat
+echo "38.  NetHunter"
+echo "============================" | lolcat
+echo "39.  USERRECON"
+echo "============================" | lolcat
+echo "40.  ASCII ART MAPS"
 echo "============================" | lolcat
 echo "0. EXIT"
 echo "============================" | lolcat
@@ -413,9 +423,9 @@ if [ $pil = 33 ]
 then
 clear
 figlet WAIT.. |lolcat
-git clone https://github.com/AndriGanz/whatshack
-cd whatshack
-sh whatshack.sh
+git clone https://github.com/thelinuxchoice/blackeye
+chmod +x blackeye.sh
+sh blackeye.sh
 fi
 
 if [ $pil = 34 ]
@@ -439,17 +449,72 @@ chmod +x d-tect.py
 python2 d-tect.py
 fi
 
+if [ $pil = 36 ]
+then
+clear
+figlet WAIT.. |lolcat
+apt install git
+git clone https://github.com/UltimateHackers/ReconDog
+cd ReconDog
+chmod +x dog.py
+Python2 dog.py
+fi
+
+if [ $pil = 37 ]
+then
+clear
+figlet WAIT.. |lolcat
+git clone https://github.com/LOoLzeC/DarkSploit
+cd DarkSploit
+cd install
+sh installtermux.sh
+pip2 install -r requirements.txt
+python2 DrXp.py
+fi
+
+if [ $pil = 38 ]
+then
+clear
+figlet WAIT.. |lolcat
+apt install git
+git clone https://github.com/Hax4us/Nethunter-In-Termux.git
+cd Nethunter
+chmod +x kalinethunter
+./kalinethunter
+./startkali.sh
+fi
+
+if [ $pil = 39 ]
+then
+clear
+figlet WAIT.. |lolcat
+pkg install curl
+pkg install openssh
+pkg install python python2 -y
+git clone https://github.com/thelinuxchoice/userrecon
+cd userrecon
+bash userrecon.sh
+fi
+
+if [ $pil = 40 ]
+then
+clear
+figlet WAIT.. |lolcat
+pkg install perl
+git clone https://github.com/x-xsystm/maps.git
+cd maps
+perl maps.pl
+fi
+
 if [ $pil = 0 ]
 then
 clear
 figlet WAIT.. |lolcat
-sleep 2
+sleep 1
 clear
-echo " Thanks Udah Gunakan Tools Saya " |lolcat
-sleep 1
-echo " Semoga Bermanfaat "     |lolcat
-sleep 1
-echo " Created By : Andre Wp "  |lolcat
+exit
+echo "Thanks Udah Gunakan Tools Saya"|lolcat
+echo "Created By : Andre Wp"  |lolcat
 exit
 fi
 
